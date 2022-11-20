@@ -3696,16 +3696,16 @@ Created using IcoMoon - icomoon.io
   padding-top: 20vh; }
 
 .page-header {
-  height: 120vh;
+  height: 100vh;
   max-height: 1050px;
   padding: 0;
   color: #FFFFFF;
   position: relative;
   background-position: center center;
-  background-size: cover; }
+  background-size: contain; }
   .page-header .page-header-image {
     position: absolute;
-    background-size: cover;
+    background-size: contain;
     background-position: center center;
     width: 100%;
     height: 100%;
