@@ -130,16 +130,28 @@
                 
                 <h3 id="issue-report-classification">Issue Report Classification</h3>
                 <p>
-                 The issue report classification competition consists of building and testing a <b>multi-class classification model</b> to classify issue report documents as belonging to one category representing the type of information that a issue report is conveying.
+                 The issue report classification competition consists of building and assessing a 
+			<b>multi-class classification model</b> to classify issue reports 
+			as belonging to one category 
+			representing the type of information 
+			they convey.
                 </p>
                 <p>
-                  We provide a dataset encompassing more than <b>1.4 million</b> labeled issue reports (as bugs, enhancements, questions and documentation) extracted from real open-source projects. 
-                  You are invited to leverage this dataset for evaluating your classification approaches and compare the achieved results against proposed baseline approaches based on FastText and RoBERTa.
+                  We provide a dataset encompassing more than <b>1.4 million</b> labeled issue reports 
+			(as bugs, enhancements, questions, and documentation) 
+			extracted from real open-source projects. 
+                  You are invited to leverage this dataset 
+			to evaluate your proposed approache(s) 
+			and compare your achieved results against 
+			our baselines (based on FastText and RoBERTa).
                 </p>
                 <p>
-                  You must train, tune and evaluate your multi-class classification model(s) using the provided training and test sets.
-                  We created a <b><a href="https://github.com/nlbse2023/issue-classification">repository</a></b> which includes the datasets, rules and baselines.
-                </p>
+                  You must train, tune and evaluate your multi-class classification model(s) 
+			using the provided training and test sets.
+			To access these datasets as well as the competition's rules and baselines, 
+			please check out our 
+			<b><a href="https://github.com/nlbse2023/issue-classification">repository</a></b>.
+		</p>
 
                 <!-- <h6>Competition overview</h6> -->
 
@@ -150,14 +162,15 @@
 
                 <h6>Updates</h6>
 
-                <p>Compared to the <a href="https://nlbse2022.github.io/tools/">2022 version</a> of the issue report competition, we made the following changes:</p>
+                <p>Compared to the <a href="https://nlbse2022.github.io/tools/">2022 version</a> 
+			of the issue report competition, we have made the following changes:</p>
                 <ul>
-                  <li>Dataset size increased from 800k to 1.4M issue reports</li>
-                  <li>Added a new label 'documentation' to the dataset</li>
-                  <li>Added synonyms of labels to the dataset</li>
-                  <li>Multi-label issues are now excluded from the dataset</li>
-                  <li>Non-english issues are now excluded from the dataset</li>
-                  <li>Added RoBERTa baseline</li>
+                  <li>we have increased the size of the competition dataset from 800K to 1.4M issue reports,</li>
+                  <li>a new category labeled as 'documentation' is added to the dataset,</li>
+                  <li>we included synonyms of labels in the new dataset,</li>
+                  <li>we removed multi-label issues from the dataset,</li>
+                  <li>similarly, we removed non-english issues from the dataset, and finally</li>
+                  <li>we added a Transformer-based (RoBERTa) baseline to this round.</li>
                </ul>
 
                <h3 id="code-comment-classification">Code Comment Classification</h3>
