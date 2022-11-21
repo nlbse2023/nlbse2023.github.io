@@ -112,38 +112,45 @@
             </div>
             <div class="section">
                 <div class="container">
-
-
                     <div class="row">
                         <div class="col-md-8 ml-auto mr-auto text-left">
 
-                            <h2 class="title">Tool Competition</h2>
+                <h2 class="title">Tool Competition</h2>
 
-                        <!--<p>To be defined</p>-->
-                            <!--Tool competition slides <a href="https://drive.google.com/file/d/189em_mC-NIbzIIopu4HeUOXe86mA2BFQ/view?usp=sharing"> <img src="../img/pdf.png" style="width:20px;height:20px;"> </a>-->
-                              <h3>Introduction</h3>
-                              <p>NLP-based approaches and tools have been proposed to improve the efficiency of software engineers, processes, and products, by automatically processing natural language artifacts (issues, emails, commits, etc.).</p>
+                <!--Tool competition slides <a href=""> <img src="../img/pdf.png" style="width:20px;height:20px;"> </a>-->
+                <h3>Introduction</h3>
 
-                              <p>We believe that the availability of accurate tools is becoming increasingly necessary to improve Software Engineering (SE) processes. Two important processes are (i) issue management and prioritization and (ii) code comment classification where developers have to understand, classify, prioritize, assign, etc. incoming issues and code comments reported by end-users and developers.</p>
+                <p>NLP-based approaches and tools have been proposed to improve the efficiency of software engineers, processes, and products, by automatically processing natural language artifacts (issues, emails, commits, etc.).</p>
+
+                <p>We believe that the availability of accurate tools is becoming increasingly necessary to improve Software Engineering (SE) processes. Two important processes are (i) issue management and prioritization and (ii) code comment classification where developers have to understand, classify, prioritize, assign, etc. incoming issues and code comments reported by end-users and developers.</p>
 
 							  <p>We are pleased to announce the second edition of the NLBSE'23 tool competition on <b>issue report classification</b> and, for the first time on <b>code comment classification</b>; two important tasks in issue and code comment management and prioritization.</p>
-
-
-                <h3>Issue Report Classification</h3>
+							              
+                <p>You are invited to participate in one or both tool competitions.</p>
+                
+                <h3 id="issue-report-classification">Issue Report Classification</h3>
                 <p>
-                  For the issue classification competition, we provide a dataset encompassing more than 1.4 million labeled issue reports (as bugs, enhancements, questions and documentation) extracted from real open-source projects. You are invited to leverage this dataset for evaluating your classification approaches and compare the achieved results against proposed baseline approaches (based on FastText and RoBERTa).
+                 The issue report classification competition consists of building and testing a <b>multi-class classification model</b> to classify issue report documents as belonging to one category representing the type of information that a issue report is conveying.
+                </p>
+                <p>
+                  We provide a dataset encompassing more than <b>1.4 million</b> labeled issue reports (as bugs, enhancements, questions and documentation) extracted from real open-source projects. 
+                  You are invited to leverage this dataset for evaluating your classification approaches and compare the achieved results against proposed baseline approaches based on FastText and RoBERTa.
+                </p>
+                <p>
+                  You must train, tune and evaluate your multi-class classification model(s) using the provided training and test sets.
+                  We created a <b><a href="https://github.com/nlbse2023/issue-classification">repository</a></b> which includes the datasets, rules and baselines.
                 </p>
 
-                <h5>Competition overview</h5>
-                <p>We created a <a href="https://github.com/nlbse2023/issue-classification">repository</a> with detailed information about the competition (data, baseline approach, paper submission, paper format, etc.). </p>
+                <!-- <h6>Competition overview</h6> -->
+
 							  
-                <p>The submissions will be ranked based on the F1 score (micro-averaged) achieved by the proposed classifiers on the test set, as indicated in the papers.</p>
+                <!-- <p>The submissions will be ranked based on the multi-class F1 score (micro-averaged) achieved by the proposed classifiers on the test set, as indicated in the papers.</p> -->
 
-							<p>The submission with the highest F1 score will be the winner of the competition.</p>
+							  <!-- <p>The submission with the highest F1 score will be the winner of the competition.</p> -->
 
-                <h5>Updates</h5>
+                <h6>Updates</h6>
 
-                <p>Compared to the 2022 version of the competition, we have made the following changes:</p>
+                <p>Compared to the <a href="https://nlbse2022.github.io/tools/">2022 version</a> of the issue report competition, we made the following changes:</p>
                 <ul>
                   <li>Dataset size increased from 800k to 1.4M issue reports</li>
                   <li>Added a new label 'documentation' to the dataset</li>
@@ -153,64 +160,148 @@
                   <li>Added RoBERTa baseline</li>
                </ul>
 
-
-               <h3>Code Comment Classification</h3>
+               <h3 id="code-comment-classification">Code Comment Classification</h3>
                <p>
-                The code comment classification competition consists of building and testing <b>a set of Binary Classifiers</b> to classify class comment sentences as belonging to one or more categories representing the types of information that a sentence is conveying.
+                The code comment classification competition consists of building and testing <b>a set of binary classifiers</b> to classify class comment sentences as belonging to one or more categories representing the types of information that a sentence is conveying.
                </p>
-
                <p>
                 For the competition, we provide a dataset of <b>6723</b> class comment sentences and <b>19</b> baseline classifiers based on the Random Forest model. Participants will propose their classifiers for this task to outperform the baselines.
                </p>
 
-               <h5>Competition overview</h5>
-
-               <p>We created a <a href="#">notebook</a> with detailed information about the competition (data, rules, baseline, etc.). </p>
-
+               <!-- TODO href -->
                <p>
+                  You must train, tune and evaluate your binary classifiers using the provided training and test sets.
+                  We created a <b><a href="#">notebook</a></b> with information about the code comment classification competition including dataset, rules, and baselines.
+                </p>
+
+               <!-- <h6>Competition overview</h6> -->
+
+               <!-- <p>
                 Since participants will submit a set of binary classifiers, the submissions will be ranked based on the number of classifiers that outperform the baselines by F1 score. Such performance must be computed on the test set.
-               </p>
+               </p> -->
 
-               <p>
+               <!-- <p>
                 The submission with the highest count of classifiers with higher F1 scores than the baselines will be the <b>winner of the competition</b>. In the case of ties, the highest average of F1 scores across <b>all 19</b> (7 for Java, 7 for Pharo, and 5 for Python) binary classifiers will declare the winner.
-               </p>
+               </p> -->
 
-               <p>
+               <!-- <p>
                 The reported F1 scores and count of outperforming classifiers in the paper will be used to rank the participants.
-               </p>
+               </p> -->
 
 
-              <h5>How to participate?</h5>
-
-                <p>To participate in the competition, you must:</p>
+              <h3>Participation</h3>
+              <p>
+                To participate in any of the competitions, you must train, tune and evaluate your models using the provided training and test sets of the respective competition.
+              </p>
+              <p>
+                Additionally, you must write a paper (2-4 pages) describing:
+              </p>
 							<ul>
-								<li>Train and tune a multi-label classifier or a set of Binary Classifier using the provided training sets (more details below).</li>
+							  <li>The architecture and details of the classification models;</li>
+							  <li>The procedure used to pre-process the data;</li>
+							  <li>The procedure used to tune the classifiers on the training set;</li>
+							  <li>The results of your classifiers on the test set;</li>
+							  <li>Additional info: provide a link to your code/tool with proper documentation on how to run it and replicate the results;</li>
+							</ul>
+              <!-- <p>To participate in the competition, you must:</p>
+							<ul>
+								<li>Train and tune a set of Binary Classifier using the provided training sets (more details below).</li>
 								<li>Evaluate your classifier on the provided test sets</li>
-								<li>Write a paper (4 pages max.) describing:</li>
+								<li>Write a paper (2-4 pages) describing:</li>
 									<ul>
-									   <li>The architecture and details of the classifier</li>
-									   <li>The procedure used to pre-process the data</li>
-									   <li>The procedure used to tune the classifier on the training sets</li>
-									   <li>The results of your classifier on the test set</li>
-									   <li>Additional info.: provide a link to your code/tool with proper documentation on how to run it and replicate the results</li>
+									  <li>The architecture and details of the classification models;</li>
+									  <li>The procedure used to pre-process the data;</li>
+									  <li>The procedure used to tune the classifiers on the training set;</li>
+									  <li>The results of your classifiers on the test set;</li>
+									  <li>Additional info.: provide a link to your code/tool with proper documentation on how to run it and replicate the results</li>
 									</ul>
-								<li>Submit the paper by the deadline using our <a href="#">submission form</a></li>
-              </ul>
+              </ul> -->
 
-							<p>Submissions will be evaluated and accepted based on <b>correctness</b> and <b>reproducibility</b>, defined by the following criteria:</p>
+              <!-- TODO href -->
+						  <p>Submit the paper by the deadline using our <a href="https://forms.gle/x1Wy2iA8L7ju6mNb8">submission form</a>.</p>
+							
+              <p>All submissions must conform to the <a href="https://conf.researchr.org/track/icse-2023/icse-2023-technical-track#how-to-submit">ICSE'23 formatting and submission instructions</a> and do not need to be double-blinded.</p>
+						  
+              <p>Participation in both competitions is allowed, but requires a <b>distinct</b> paper for each submission.</p>
+
+              <h3>Submission acceptance and competition</h3>
+
+							<p>Submissions will be evaluated and accepted based on correctness and reproducibility, defined by the following criteria:</p>
 								<ul>
-								   <li>Clarity and detail of the paper content</li>
-								   <li>Availability of the code/tool, including the training/tuning/evaluation pipeline, released as open-source</li>
-								   <li>Correct training/tuning/evaluation of your code/tool on the provided data</li>
-                   <li>Correct report of the metrics and results</li>
-								   <li>Clarity of the code documentation</li>
+								   <li>Clarity and detail of the paper content;</li>
+								   <li>Availability of the code/tool, including the training/tuning/evaluation pipeline, released as open-source;</li>
+								   <li>Correct training/tuning/evaluation of your code/tool on the provided data;</li>
+                   <li>Correct report of the metrics and results;</li>
+								   <li>Clarity of the code documentation;</li>
 								</ul>
 
-							<p>The accepted submissions will be published at the workshop proceedings.</p>
+							<p>The accepted submissions will be <b>published at the workshop proceedings</b>.</p>
 
-							
-                
-                
+							<h6>Issue Report Classification</h6>
+              <p>
+                Participants will submit one or more multi-class classifiers and the submissions will be ranked based on the F1 score (micro-averaged) achieved by the proposed classifiers on the <a href="#">issue report test set</a>, as indicated in the papers.
+              </p>
+              <p>
+                The submission with the highest F1 score will be the <b>winner</b> of the issue report classification competition.
+              </p>
+
+              <h6>Code Comment Classification</h6>
+              <p>
+                <!-- TODO href to code comment notebook x2 -->
+                Since participants will submit a set of binary classifiers, the submissions will be ranked based on the number of classifiers that outperform the <a href="#">baselines</a> by F1 score. Such performance must be computed on the <a href="#">code comment test sets</a>.
+              </p>
+              <p>
+                The submission with the highest count of classifiers with higher F1 scores than the baselines will be the <b>winner</b> of the code comment classification competition. In the case of ties, the highest average of F1 scores across <b>all 19</b> (7 for Java, 7 for Pharo, and 5 for Python) binary classifiers will declare the winner.
+              </p>              
+              <p>
+                The reported F1 scores and count of outperforming classifiers in the paper will be used to rank the participants.
+              </p>
+              
+              <h3 id="citing">Citing relevant work</h3>
+              <p>
+                Since you will be using the dataset and possibly the original work behind the dataset, please cite the following references in your paper:
+              </p>
+
+              <h6>Issue Report Classification</h6>
+              <p></p>
+              <pre><code>@inproceedings{nlbse2023issue-reports,
+  author={Kallis, Rafael and Izadi, Maliheh and Di Sorbo, Andrea and Panichella, Sebastiano},
+  title={NLBSE'23 Tool Competition on Issue Report Classification},
+  booktitle={Proceedings of The 2nd International Workshop on Natural Language-based Software Engineering (NLBSE'23)},
+  year={2023}
+}</code></pre>
+              <p></p>
+              <pre><code>@article{ticket-tagger-scp,
+  author={Kallis, Rafael and Di Sorbo, Andrea and Canfora, Gerardo and Panichella, Sebastiano},
+  title={Predicting issue types on GitHub},
+  journal={Science of Computer Programming},
+  volume={205},
+  pages={102598},
+  year={2021},
+  issn={0167-6423},
+  doi={https://doi.org/10.1016/j.scico.2020.102598},
+  url={https://www.sciencedirect.com/science/article/pii/S0167642320302069}
+}</code></pre>
+
+              <h6>Code Comment Classification</h6>
+              <p></p>
+              <pre><code>@inproceedings{nlbse2023code-comments,
+  author={Rani, Pooja and Pascarella, Luca and Chaparro, Oscar and Di Sorbo, Andrea and Panichella, Sebastiano},
+  title={NLBSE'23 Tool Competition on Code Comment Classification},
+  booktitle={Proceedings of The 2st International Workshop on Natural Language-based Software Engineering (NLBSE'23)},
+  year={2023}
+}</code></pre>
+              <p></p>
+              <pre><code>@article{rani2021,
+  title={How to identify class comment types? A multi-language approach for class comment classification},
+  author={Rani, Pooja and Panichella, Sebastiano and Leuenberger, Manuel and Di Sorbo, Andrea and Nierstrasz, Oscar},
+  journal={Journal of systems and software},
+  volume={181},
+  pages={111047},
+  year={2021},
+  publisher={Elsevier}
+}</code></pre>
+
                 <!-- <h3>Code Comment Classification</h3> -->
                 
                 
@@ -275,8 +366,20 @@
 
                             <!--<h4 class="subsection">NLBSE'23 SCP special issue</h4>
                             <p>The authors of the best accepted (research and tool) papers will be invited to develop and submit a software tool to the NLBSE'23 special issue in the Software Track of the Journal of Science of Computer Programming. <a href="https://nlbse2023.github.io/scp-issue/">More info</a></p>-->
+                            
+                            <h4  class="subsection">Important Links</h4>
 
+                            <!-- <p><b><a href="#">Issue report classification repository</a></b></p> -->
+                            <h6><a href="#">Issue report classification repository</a></h6>
+                            <p></p>
 
+                            
+                            <!-- <p><b><a href="#">Code comment classification notebook</a></b></p> -->
+                            <h6><a href="#">Code comment classification notebook</a></h6>
+                            <p></p>
+                            
+                            <h6><a href="https://forms.gle/x1Wy2iA8L7ju6mNb8">Submission form</a></h6>
+                            <p></p>
                         </div>
 
 
