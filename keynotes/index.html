@@ -154,11 +154,27 @@
                           <!--<p><a href="" target="_blank">» Slides</a></p>-->
                           <p class="text-left">
                             <strong>Abstract</strong>:
-                             To be announced 
+                            As large language models become more and more sophisticated, the machine learning problem "How to train a great new model so it best solves my task" increasingly pivots to "How to run a great existing model so it best solves my task". 
+                            <br>
+                            <br>
+                            This is easier said than done and requires reconciliation of four goals:<br>
+
+                            <ul>
+                              <li>How to communicate the problem and the format in which you expect your answer;</li>
+                              <li>How to communicate all background information the model might need to arrive at that answer;</li>
+                              <li>How to communicate with the model robustly, in particular in a way that it is used to from its training set;</li>
+                              <li>How to keep the question short in order to adhere to the context window and save computing time and cost.</li>
+                           </ul>
+
+                           These goals are almost always conflicting. For example, an established strategy for 1 is few-shotting, but in particular for source code, this will often be very different in style to the model's training set, can easily bias the model, and uses lots of space that could otherwise be used for background information.
+                           <br>
+                           <br>
+                           I discuss strategies for addressing each of these goals in the code domain, as well as methods for balancing them against each other. I will in particular focus on the example of GitHub Copilot and related AI for software development projects.
+
                           </p>
                           <p class="text-left">
                             <strong>Biography</strong>:
-                            Albert Ziegler is a Staff ML engineer at GitHub Next. After his PhD in Pure Mathematics and Computability Theory, he's turned to applying machine learning to the software development process, researching coding productivity at Semmle and then joining the ML-on-code group at GitHub. He has been the Copilot project's resident machine learning expert since its inception.</p>
+                            Albert Ziegler is a principal machine learning engineer with a background in Mathematics and a home at GitHub Next, GitHub's innovation and future group. His main interests are combinations of deductive and intuitive reasoning to improve the software development experience. He's previously worked on developer productivity, ML guided CodeQL, and he was part of the trio that conceived and then implemented the GitHub Copilot project. His most recent projects include Copilot Radar and AI for Pull Requests.</p>
                         </div>
                       </div>
                     </div>
