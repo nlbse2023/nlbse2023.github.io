@@ -9,7 +9,7 @@
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awnoteesome/latest/css/font-awesome.min.css" />
 
     <link href="../css/bootstrap.min.css" rel="stylesheet" />
     <link href="../css/now-ui-kit.css?v=1.1.0" rel="stylesheet" />
@@ -263,13 +263,15 @@
 
               <h6>Code Comment Classification</h6>
               <p>
-                Since participants will submit a set of binary classifiers, the submissions will be ranked based on the number of classifiers that outperform the baselines by F1 score. Such performance must be computed on the code comment test sets.
+                Since participants will submit a set of binary classifiers (based on a single ML/DL model -- see more details in our <b><a href="https://colab.research.google.com/drive/1cW8iUPY9rTjZdXnGYtJ4ARBSISyKieWt#scrollTo=7ITz0v7mv4jV">notebook</a></b>), we will use a formula to rank the competition submissions and determine a winner.
+              </p>
+
+
+              <p>
+                  The formula, specified in our <b><a href="https://colab.research.google.com/drive/1cW8iUPY9rTjZdXnGYtJ4ARBSISyKieWt#scrollTo=7ITz0v7mv4jV">notebook</a></b> , accounts for: (1) the overall averaged F1 score achieved by the classifiers, and (2) the proportion of classifiers that improve the baseline classifiers. Essentially, we encourage participants to improve as many baseline classifiers as many categories.
               </p>
               <p>
-                The submission with the highest count of classifiers with higher F1 scores than the baselines will be the <b>winner</b> of the code comment classification competition. In the case of ties, the highest average of F1 scores across <b>all 19</b> (7 for Java, 7 for Pharo, and 5 for Python) binary classifiers will declare the winner.
-              </p>
-              <p>
-                The reported F1 scores and count of outperforming classifiers in the paper will be used to rank the participants.
+                 The reported F1 scores and count of outperforming classifiers in the paper will be used to rank the participants.
               </p>
 
               <h3 id="citing">Citing relevant work</h3>
